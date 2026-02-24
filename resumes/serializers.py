@@ -5,7 +5,7 @@ class ExperienceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Experience
         fields = '__all__'
-        read_only_fields = ['id']
+        read_only_fields = ['id', 'resume']  # Ajouter 'resume' en read_only
 
     # Validation: end_date must be after start_date
     def validate(self, data):
@@ -20,7 +20,7 @@ class EducationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Education
         fields = '__all__'
-        read_only_fields = ['id']
+        read_only_fields = ['id', 'resume']  # Ajouter 'resume' en read_only
 
     # Validation: end_date must be after start_date
     def validate(self, data):
@@ -35,7 +35,7 @@ class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
         fields = '__all__'
-        read_only_fields = ['id']
+        read_only_fields = ['id', 'resume']  # Ajouter 'resume' en read_only
 
     # Validation: proficiency must be between 1-5
     def validate_proficiency(self, value):
@@ -55,5 +55,3 @@ class ResumeSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'full_name', 'email', 'phone', 'summary',
                  'created_at', 'updated_at', 'experiences', 'educations', 'skills']
         read_only_fields = ['id', 'created_at', 'updated_at']
-
-    # Validation: email is already validated by EmailField

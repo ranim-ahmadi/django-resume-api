@@ -139,6 +139,7 @@ pytest --cov=resumes --cov-report=html
 
 > **Test Coverage: 97% ✅**  
 > Open `htmlcov/index.html` in your browser to view the detailed report.
+<img width="1873" height="762" alt="testcov" src="https://github.com/user-attachments/assets/cce2652a-1ccd-46cb-87d0-195dfb9e939c" />
 
 ---
 
@@ -158,4 +159,12 @@ The pipeline automatically handles:
 2. **Migrations**: Verifies that all migrations are up to date.
 3. **Docker**: Builds the production-ready image.
 
+<div align="center">
+
 ![Pipeline Status](https://github.com/ranim-ahmadi/django-resume-api/actions/workflows/ci.yml/badge.svg)
+
+### 📸 Pipeline Execution
+<img width="1892" height="692" alt="cicd" src="https://github.com/user-attachments/assets/2c3617c8-1fd8-45cd-8b5b-5bc3a5880d97" />
+
+
+</div>
